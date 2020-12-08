@@ -2,7 +2,7 @@ build:
 	docker build -t code-server .
 
 run:
-	docker run -d -p 443:443 -p 8080:8080 -p 8000:8000 -p 3000:3000 -p 80:80  --name code-server-container -v "$PWD:/home/coder/project" -e PASSWORD='ibhubs' code-server:latest
+	docker run -d -p 443:443 -p 8080:8080 -p 8000:8000 -p 3000:3000 -p 80:80  --name code-server-container -v "$$PWD:/home/workspace" -e PASSWORD='ibhubs' code-server:latest
 
 shell:
 	docker exec -it code-server-container /bin/bash
