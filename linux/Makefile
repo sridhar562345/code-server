@@ -20,7 +20,7 @@ stop:
 install:
 	sudo apt-get update
 	sudo apt install -y docker.io
-	sudo python3 -m pip install --upgrade pip
+	python3 -m pip install --upgrade pip
 	pip3 install docker-compose
 
 stopall:
